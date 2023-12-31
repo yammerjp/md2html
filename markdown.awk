@@ -1158,7 +1158,7 @@ function endParser() {
 		oprint("</" block[nl] ">");
 	}
 	gsub(/<<[^"]*/, "", otext);
-	print(otext);
+	parsedHtml = parsedHtml otext;
 
   # Print footnotes
   if(alen(fnref)>0) {
